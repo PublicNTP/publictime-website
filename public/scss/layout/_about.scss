@@ -1,0 +1,240 @@
+.about {
+  width: 100%;
+  float: left;
+
+  &:first-of-type {
+    margin-top: 20px;
+  }
+
+  &__emph {
+    color: color(footer);
+  }
+
+  &__headshot {
+    width: 480px;
+    float: left;
+    height: 480px;
+    object-fit: cover;
+    margin-top: 48px;
+
+    &--right {
+      float: right;
+    }
+
+		@media screen and (max-width: breakpoint(tablet-lg)) {
+			width: 360px;
+      height: 360px;
+		}
+
+		@media screen and (max-width: breakpoint(tablet)) {
+			max-width: 360px;
+      width: 100%;
+      margin: 0 auto 30px auto;
+      display: block;
+      float: none;
+      height: auto;
+		}
+  }
+
+  &__person-wrap {
+    width: calc(100% - 480px);
+    float: right;
+    padding-left: 80px;
+    padding-right: 40px;
+
+    &--left {
+      float: left;
+      padding-right: 80px;
+      padding-left: 40px;
+      text-align: right;
+    }
+
+		@media screen and (max-width: breakpoint(tablet-lg)) {
+			width: calc(100% - 360px);
+		}
+
+		@media screen and (max-width: breakpoint(tablet)) {
+			width: 100%;
+      padding: 0;
+		}
+  }
+
+  &__flickr {
+    display: block;
+    width: 32px;
+    margin-left: 10px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__linkedin {
+    display: block;
+    float: left;
+
+    &--right {
+      float: right;
+    }
+
+		@media screen and (max-width: breakpoint(tablet)) {
+      float: none;
+      // margin: 0 auto 20px auto;
+		}
+  }
+
+  &__name {
+    font-size: 24px;
+    margin-bottom: 20px;
+    float: left;
+    width: 100%;
+    color: color(mainText);
+
+		@media screen and (max-width: breakpoint(tablet)) {
+      text-align: center;
+		}
+  }
+
+  &__p {
+    width: 100%;
+    float: left;
+    line-height: 1.7;
+    font-size: 14px;
+    color: color(textColor);
+    margin-bottom: 20px;
+
+    a {
+      text-decoration: none;
+      color: color(link);
+    }
+  }
+
+  &__spec {
+    width: 100%;
+    float: left;
+    line-height: 1.7;
+    font-size: 14px;
+    color: color(textColor);
+    margin-bottom: 20px;
+  }
+
+  &__wrap {
+    width: 100%;
+    float: left;
+    margin-bottom: 80px;
+  }
+}
+
+.svg-linkedin {
+  fill: #808080;
+  cursor: pointer;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+.svg-wrapper {
+  position: relative;
+  max-height: 32px;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  transition: .3s all ease-in-out;
+
+  &:hover {
+    background-color: white;
+  }
+
+  &:hover svg path {
+    fill: #3479B0;
+  }
+
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.waddell-icon{
+  margin-right:10px;
+}
+.waddell-icon-wrapper {
+  fill: #808080;
+  cursor: pointer;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  path{
+    fill: #808080;
+  }
+}
+
+.waddell-stroke{
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 1.6813px;
+  stroke: #fff;
+  cursor: pointer;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  &-rounded{
+    stroke-linejoin: round;
+    fill: none;
+    stroke-miterlimit: 10;
+    stroke-width: 1.6813px;
+    stroke: #fff;
+    cursor: pointer;
+    transition: 200ms;
+    transition-timing-function: ease-in-out;
+  }
+}
+
+.waddell-icon:hover{
+  .waddell-icon-wrapper path{
+    fill: #f1f3f4;
+  }
+  .waddell-stroke{
+    stroke: #000;
+    fill: none;
+    &-rounded{
+      stroke: #000;
+      fill: none;
+    }
+  }
+}
+
+// .flickr {
+
+//   &-pink {
+//     fill: #FF0083;
+//   }
+//   &-blue {
+//     fill: #005FDF;
+//   }
+// }
+
+.flickr {
+  margin-left: 10px;
+
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  &-pink, &-blue, &-gray {
+    cursor: pointer;
+    transition: 200ms;
+    transition-timing-function: ease-in-out;
+  }
+
+  &:hover svg {
+    .flickr {
+      &-pink {
+        fill: #FF0083;
+      }
+      &-blue {
+        fill: #005FDF;
+      }
+      &-gray {
+        fill: #E8E8E8;
+      }
+    }
+  }
+}
